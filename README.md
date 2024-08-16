@@ -14,6 +14,12 @@ WalletWise - A Expense Tracker application helps users manage their finances by 
 - **Backend**: .NET Core Web API for handling business logic and database interactions.
 - **Database**: PostgreSQL for storing user data securely.
 
+## Developers Information
+- **Frontend (Web)**: Rohan S Kamath - rohankamath11@gmail.com - https://github.com/rohanskamath
+- **Frontend (Mobile)**: Amitha Pai - amipie0410@gmail.com - https://github.com/amithapai015
+- **Backend**: Raghavendra Pai - raghavendra.pai.13@gmail.com - https://github.com/raghpai13
+
+
 ## Website
 
 ### Setup Instructions
