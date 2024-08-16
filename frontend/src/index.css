@@ -1,0 +1,815 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap");
+:root {
+  scroll-behavior: smooth;
+  --primary: #4154f1;
+  --second: #717ff5;
+  --bgColor: #f6f9ff;
+}
+
+/*****************
+Custome scrollbar
+******************/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(235, 235, 235);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #012970;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #012970;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Merriweather", sans-serif;
+  color: #4444;
+  background: var(--bgColor);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--second);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Merriweather", sans-serif;
+}
+
+/*****************
+Header CSS
+******************/
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 60px;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+  background-color: white;
+  padding-left: 20px;
+}
+
+/* Searh Bar */
+/* Toggle Sidebar Buton */
+.header .toggle-sidebar-btn {
+  font-size: 32px;
+  padding-left: 10px;
+  cursor: pointer;
+  color: #012970;
+}
+
+/*****************
+Logo CSS
+******************/
+.logo {
+  line-height: 1;
+  text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+  .logo {
+    width: 280px;
+  }
+}
+
+.logo span {
+  font-size: 26px;
+  font-weight: 700;
+  color: #012970;
+  font-family: "Merriweather", sans-serif;
+}
+
+/*****************
+Search Bar CSS
+******************/
+.header .search-bar {
+  min-width: 360px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1199px) {
+  .header .search-bar {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(1, 41, 112, 0.1);
+    background: white;
+    z-index: 9999;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .header .search-bar-show {
+    top: 60px;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.header .search-form {
+  width: 100%;
+}
+
+.header .search-form input {
+  border: 0;
+  font-size: 14px;
+  color: #012970;
+  border: 1px solid rgba(1, 41, 112, 0.2);
+  padding: 7px 30px 7px 8px;
+  border-radius: 3px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.header .search-form input:focus,
+.header .search-form input:hover {
+  outline: none;
+  box-shadow: 0 0 10px 0 rgba(1, 41, 112, 0.15);
+  border: 1px solid rgba(1, 41, 112, 0.3);
+}
+
+.header .search-form button {
+  border: 0;
+  padding: 0;
+  margin-left: -30px;
+  background: none;
+}
+
+.header .search-form button i {
+  color: #012970;
+}
+
+/*****************
+Navigation CSS
+******************/
+
+.header-nav ul {
+  list-style: none;
+}
+
+.header-nav > ul {
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav .nav-icon {
+  font-size: 22px;
+  color: #012970;
+  margin-right: 25px;
+  position: relative;
+}
+
+.header-nav .nav-profile {
+  color: #012970;
+}
+
+.header-nav .nav-profile img {
+  max-height: 36px;
+}
+
+.header-nav .nav-profile span {
+  font-family: "Merriweather", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.header-nav .profile {
+  min-width: 240px;
+  padding-bottom: 0;
+  top: 8px !important;
+}
+
+.header-nav .profile .dropdown-header h6 {
+  font-size: 13px;
+  font-family: "Merriweather", sans-serif;
+  color: black;
+}
+
+.header-nav .profile .dropdown-header span {
+  font-size: 14px;
+  font-family: "Merriweather", sans-serif;
+}
+
+.header-nav .profile .dropdown-item {
+  font-size: 10px;
+  font-family: "Merriweather", sans-serif;
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.header-nav .profile .dropdown-item i {
+  margin-right: 10px;
+  font-size: 10px;
+  line-height: 0;
+}
+
+.header-nav .profile .dropdown-item:hover {
+  background-color: #f6f9ff;
+}
+
+/*****************
+Sidebar CSS
+******************/
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 996;
+  transition: all 0.3s;
+  padding: 20px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #aab7cf transparent;
+  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
+  background-color: #ffff;
+}
+
+@media (max-width: 1199px) {
+  .sidebar {
+    left: -300px;
+  }
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #ffff;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
+}
+
+@media (min-width: 1200px) {
+  #main,
+  #footer {
+    margin-left: 300px;
+  }
+}
+
+@media (min-width: 1199px) {
+  .toggle-sidebar .sidebar {
+    left: 0;
+  }
+}
+
+@media (min-width: 300px) {
+  .toggle-sidebar .sidebar {
+    left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .toggle-sidebar #main,
+  .toggle-sidebar #footer {
+    margin-left: 0;
+  }
+
+  .toggle-sidebar .sidebar {
+    left: -300px;
+  }
+}
+
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav li {
+  font-family: "Merriweather", sans-serif;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar-nav .nav-item {
+  margin-bottom: 5px;
+}
+
+.sidebar-nav .nav-heading {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #0d54d7;
+  font-weight: 600;
+  margin: 10px 0 5px 15px;
+}
+
+.sidebar-nav .nav-link {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #012970;
+  transition: 0.3;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+
+.sidebar-nav .nav-link i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.sidebar-nav .nav-link.collapsed {
+  color: #012970;
+  background: #ffffff;
+}
+
+.sidebar-nav .nav-link.collapsed i {
+  color: #899bbd;
+}
+
+.sidebar-nav .nav-link .bi-chevron-down {
+  margin-right: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.sidebar-nav .nav-link:not(.collapsed) .bi-chevron-down {
+  transform: rotate(180deg);
+}
+
+.sidebar-nav .nav-link.active {
+  color: #ffffff;
+  background: #012970;
+}
+
+/*****************
+Main CSS
+******************/
+
+#main {
+  margin-top: 60px;
+  padding: 20px 30px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 1199px) {
+  #main {
+    padding: 20px;
+  }
+}
+
+.breadcrumb-item {
+  font-family: "Merriweather", sans-serif;
+}
+
+.pagetitle {
+  margin-bottom: 10px;
+}
+
+.pagetitle h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #012970;
+}
+
+.dashboard .info-card {
+  padding-bottom: 10px;
+}
+
+.dashboard .info-card h6 {
+  font-size: 28px;
+  color: #012970;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard .card-icon {
+  font-size: 25px;
+  line-height: 0;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.dashboard .sales-card .card-icon {
+  color: #012970;
+  background-color: #f6f6fe;
+}
+
+/*****************
+Card CSS
+******************/
+
+.card {
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(1, 41, 112, 0.1);
+}
+
+.card-header,
+.card-footer {
+  border-color: #ebeef4;
+  background-color: #fff;
+  color: #798eb3;
+}
+
+.card-title {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.card-img-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.dashboard .activity {
+  font-size: 14px;
+  max-height: 150px;
+  overflow: scroll;
+  font-family: "Merriweather", sans-serif;
+}
+
+.dashboard .activity .activity-item .activite-label {
+  color: #888;
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  min-width: 64px;
+}
+
+.dashboard .activity .activity-item .activite-label::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  width: 4px;
+  top: 0;
+  bottom: 0;
+  background-color: #ff00ff;
+}
+
+.dashboard .activity .activity-item .activity-badge {
+  margin-top: 3px;
+  z-index: 1;
+  font-size: 11px;
+  line-height: 0;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 3px solid #fff;
+  flex-grow: 0;
+}
+
+.dashboard .activity .activity-item .activity-content {
+  padding-left: 10px;
+  padding-bottom: 20px;
+}
+
+.dashboard .activity .activity-item:first-child .activite-label::before {
+  top: 5px;
+}
+
+.dashboard .activity .activity-item:last-child .activity-content {
+  padding-bottom: 0;
+}
+
+/*****************
+Footer CSS
+******************/
+.footer {
+  padding: 20px;
+  font-size: 14px;
+  transition: all 0.3s;
+  border-top: 1px solid #cddfff;
+}
+
+/*****************
+Login Modal CSS
+******************/
+.social_login {
+  text-align: center;
+}
+
+.social_log {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+
+.social_log li {
+  margin: 0 4px;
+}
+
+.social_login p {
+  font-family: "Merriweather", sans-serif;
+  color: #8c8c8c;
+}
+
+.social_log li img {
+  width: 50px;
+}
+.social_log li:hover {
+  cursor: pointer;
+}
+
+.signin_modal .nav-tabs .nav-link {
+  background-color: #fff;
+  border-radius: 0;
+  color: black;
+  border-color: #fff;
+  font-family: "Merriweather", sans-serif;
+}
+
+.signin_modal .nav-tabs .nav-link:hover {
+  border-color: #fff;
+}
+
+.signin_modal .nav-tabs .nav-link.active {
+  background-color: #012970;
+  color: white;
+  border-color: #fff;
+  font-family: "Merriweather", sans-serif;
+}
+
+.signin_modal .nav-tabs .nav-item {
+  width: 50%;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.signin_modal .nav-tabs {
+  border-bottom: none;
+}
+
+p {
+  font-family: "Merriweather", sans-serif;
+}
+
+.loginOR {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+}
+
+.loginOR:before,
+.loginOR:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid grey;
+  margin: auto;
+}
+
+.loginOR:before {
+  margin-right: 10px;
+}
+
+.loginOR:after {
+  margin-left: 10px;
+}
+
+.signin_tab {
+  padding: 0 3rem;
+}
+
+.signin_tab input.form-control {
+  font-size: 13px;
+  color: #8c8c8c;
+  font-family: "Merriweather", sans-serif;
+}
+
+.validations {
+  margin-top: 6px;
+  font-size: 9px;
+  color: red;
+  font-family: "Merriweather", sans-serif;
+}
+
+.signin_tab .tab-pane .form-group .error {
+  border: 1px solid red;
+}
+
+.signin_tab .tab-pane .form-group .password-mismatch {
+  border-color: red !important;
+}
+
+.signin_tab .tab-pane .form-group .password-match {
+  border-color: green !important;
+}
+
+/*****************
+Transaction CSS
+******************/
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Merriweather", sans-serif;
+}
+
+.select {
+  padding-left: 5px;
+  width: 50px;
+  height: 30px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  font-family: "Merriweather", sans-serif;
+}
+
+.table {
+  font-family: "Merriweather", sans-serif;
+}
+
+.pagination-container .pagination .page-link {
+  color: #012970;
+  cursor: pointer;
+}
+
+.pagination-container .pagination .page-link:hover {
+  color: #012970;
+  background-color: rgb(232, 229, 229);
+  cursor: pointer;
+}
+
+.pagination-container .pagination .page-item.active .page-link {
+  color: white;
+  background-color: #012970;
+  border-color: #012970;
+}
+
+/*****************
+Profile CSS
+******************/
+
+.profilesetting .profiledetails span {
+  color: black;
+  font-family: "Merriweather", sans-serif;
+  text-align: center;
+}
+
+.plus-icon-badge {
+  background-color: #012970;
+  position: relative;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  bottom: 36px;
+  left: 60px;
+}
+
+.formInput {
+  font-family: "Merriweather", sans-serif;
+  font-size: 13px;
+}
+
+.headings-side {
+  font-family: "Merriweather", sans-serif;
+  font-size: 14px;
+  color: rgb(96, 95, 95);
+}
+
+.background-badge {
+  cursor: pointer;
+  font-family: "Merriweather", sans-serif;
+  background-color: white;
+  border: 1px solid black;
+  color: #012970;
+}
+
+.background-badge-selected {
+  cursor: pointer;
+  font-family: "Merriweather", sans-serif;
+  background-color: #012970;
+  border: 1px solid #012970;
+}
+
+.background-badge-blocked {
+  font-family: "Merriweather", sans-serif;
+  background-color: #d9d9d9;
+  border: 1px solid #d9d9d9;
+}
+.background-badge-blocked.text-blocked {
+  color: #adadad;
+}
+
+.background-badge.text-badge {
+  color: #012970;
+}
+
+.card .card-body .card-logo-i {
+  background-color: #012970;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem;
+}
+
+.card .card-body .card-logo-i i{
+  font-size: 30px;
+  color: white;
+}
+
+.accordion-button.collapsed {
+  background-color: white;
+  color: black;
+}
+
+.dashboard .filter {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+}
+
+.dashboard .filter .icon {
+  text-decoration: none;
+  font-family: "Merriweather", sans-serif;
+  color: #012970;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+.dashboard .filter .dropdown-header {
+  padding: 8px 15px 0 15px;
+}
+
+.dashboard .filter .dropdown-header h6 {
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #012970;
+}
+
+.dashboard .filter .dropdown-item {
+  font-family: "Merriweather", sans-serif;
+  padding: 5px 15px;
+  font-size: 12px;
+}
+
+.dashboard .filter .dropdown-item:hover {
+  color: #012970;
+}
+
+.dashboard .filter .dropdown-item:hover,
+.dashboard .filter .dropdown-item.active {
+  color: #012970;
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.forgot-pass {
+  font-size: 12px;
+  color: #012970;
+  font-family: "Merriweather", sans-serif;
+  text-decoration: none;
+}
+
+.forgot-pass:hover {
+  color: #012970;
+}
+
+.profile-img-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
