@@ -16,8 +16,7 @@ WalletWise - A Expense Tracker application helps users manage their finances by 
 
 ## Developers Information
 - **Frontend (Web)**: Rohan S Kamath - rohankamath11@gmail.com - https://github.com/rohanskamath
-- **Frontend (Mobile)**: Amitha Pai - amipie0410@gmail.com - https://github.com/amithapai015
-- **Backend**: Raghavendra Pai - raghavendra.pai.13@gmail.com - https://github.com/raghpai13
+- **Backend**: Rohan S Kamath - rohankamath11@gmail.com - https://github.com/rohanskamath & Raghavendra Pai - raghavendra.pai.13@gmail.com - https://github.com/raghpai13
 
 
 ## Website
