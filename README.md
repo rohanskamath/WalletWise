@@ -1,5 +1,5 @@
 # WalletWise Application
-WalletWise - A Expense Tracker application helps users manage their finances by categorizing expenses, adding transactions, and visualizing data through charts. It is designed for both web and mobile platforms.
+WalletWise - A Expense Tracker application helps users manage their finances by categorizing expenses, adding transactions, and visualizing data through charts.
 
 ## Features
 - **Account Management**: Users can add and manage their account details.
